@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let detik = 7262;
+        let jam = Math.floor(detik / 3600);
+        let menit = Math.floor((detik % 3600) / 60);
+        let detik2 = detik % 3600 % 60;
+        let konversi = leftPad(jam) + ' : ' + leftPad(menit) + ' : ' + leftPad(detik2);
+        console.log("Detik  " + detik);
+        console.log("Konversi  " + konversi);
+
+        function leftPad(number, targetLength = 2) {
+            var output = number + '';
+            while (output.length < targetLength) {
+                output = '0' + output;
+            }
+            return output;
+        }
+    </script>
+</body>
+
+</html>
